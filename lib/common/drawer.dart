@@ -11,19 +11,19 @@ class AppDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            child: Text('Drawer Header'),
             decoration: BoxDecoration(
               color: Color(0xff706CFF),
             ),
+            child: Text('Drawer Header'),
           ),
           ListTile(
-            title: Text('Item 1'),
+            title: const Text('Item 1'),
             onTap: () {
               // Handle item 1 tap
             },
           ),
           ListTile(
-            title: Text('Item 2'),
+            title: const Text('Item 2'),
             onTap: () {
               // Handle item 2 tap
             },
