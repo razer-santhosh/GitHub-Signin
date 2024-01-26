@@ -36,7 +36,7 @@ class AppDrawer extends StatelessWidget {
                       width: 60,
                       child: Card(
                         color: Color(0xffFF957B), //background color
-                        child: Constants.userAvatar !=
+                        child: Constants.userAvatar ==
                                 null //show user image if it's not null
                             ? Center(
                                 child: Text(
@@ -47,8 +47,6 @@ class AppDrawer extends StatelessWidget {
                             : Image.network(
                                 Constants.userAvatar!,
                                 fit: BoxFit.contain,
-                                height: 50,
-                                width: 50,
                               ),
                       ),
                     ),
