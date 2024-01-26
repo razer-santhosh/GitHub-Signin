@@ -1,7 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:github/config/constants.dart';
-import 'package:github/screens/dashboard/dashboardController.dart';
-import 'package:github/screens/dashboard/dashboardModel.dart';
+
+import '../../config/constants.dart';
+import 'dashboardController.dart';
+import 'dashboardModel.dart';
 
 class DashboardDataProvider extends ChangeNotifier {
   bool _dataLoading = true;

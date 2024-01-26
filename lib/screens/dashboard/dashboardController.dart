@@ -1,9 +1,10 @@
 import 'dart:convert';
 
-import 'package:github/config/constants.dart';
-import 'package:github/screens/dashboard/dashboardModel.dart';
-import 'package:github/services/apiCalls.dart';
 import 'package:http/http.dart';
+
+import '../../config/constants.dart';
+import '../../services/apiCalls.dart';
+import 'dashboardModel.dart';
 
 class DashboardController {
   static Future<DashboardModel?> getUserInitialData() async {

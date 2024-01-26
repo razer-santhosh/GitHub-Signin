@@ -1,13 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:github/config/constants.dart';
-import 'package:github/screens/dashboard/dashboardProvider.dart';
 import 'package:provider/provider.dart';
 
 import 'common/themeData.dart';
+import 'config/constants.dart';
 import 'config/routes.dart';
 import 'firebase_options.dart';
 import 'common/connectivityProvider.dart';
+import 'screens/dashboard/dashboardProvider.dart';
 
 void main() async {
   WidgetsFlutterBinding

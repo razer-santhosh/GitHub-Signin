@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:github/common/commonExtension.dart';
-import 'package:github/common/dialogs.dart';
-import 'package:github/common/themeData.dart';
-import 'package:github/config/constants.dart';
 import 'package:go_router/go_router.dart';
+
+import '../config/constants.dart';
+import 'commonExtension.dart';
+import 'dialogs.dart';
+import 'themeData.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -102,7 +103,7 @@ class AppDrawer extends StatelessWidget {
                 )),
             title: const Text('Logout'),
             onTap: () async {
-              transparentDialog(context); //show loading dialog
+              transparentLoadingDialog(context); //show loading dialog
               await Constants.storage
                   .deleteAll(); //delete all local storage data
               context.pop(); //close the loading dialog

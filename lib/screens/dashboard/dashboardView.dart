@@ -1,15 +1,15 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:github/common/commonAppBar.dart';
-import 'package:github/common/dialogs.dart';
-import 'package:github/config/constants.dart';
-import 'package:github/screens/dashboard/dashboardProvider.dart';
 import 'package:provider/provider.dart';
 
+import '../../common/commonAppBar.dart';
 import '../../common/commonExtension.dart';
+import '../../common/dialogs.dart';
 import '../../common/drawer.dart';
 import '../../common/themeData.dart';
+import '../../config/constants.dart';
+import 'dashboardProvider.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});

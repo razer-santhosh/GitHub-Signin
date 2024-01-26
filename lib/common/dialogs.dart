@@ -79,7 +79,7 @@ showExitPopup(BuildContext context) async {
 //Exit Dialog Ends
 
 //Transparent Background Dialog Starts
-transparentDialog(context) async {
+transparentLoadingDialog(context) async {
   return await showGeneralDialog(
       context: context,
       barrierDismissible: false,

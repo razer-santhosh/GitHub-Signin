@@ -1,8 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:github/common/themeData.dart';
-import 'package:github/config/constants.dart';
+
+import '../config/constants.dart';
+import 'themeData.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leading;
