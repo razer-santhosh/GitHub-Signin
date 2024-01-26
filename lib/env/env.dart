@@ -9,4 +9,6 @@ abstract class Env {
   static final String clientSecret = _Env.clientSecret;
   @EnviedField(varName: 'githubRedirectUrl')
   static final String githubRedirectUrl = _Env.githubRedirectUrl;
+  @EnviedField(varName: 'githubUrl')
+  static final String githubUrl = _Env.githubUrl;
 }

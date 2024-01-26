@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:github/common/themeData.dart';
+import 'package:github/config/constants.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leading;
@@ -14,7 +15,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppTheme.lightTheme.primaryColor,
+      backgroundColor: Constants.colorCode,
       leading: leading,
       title: Text(title, style: AppTheme.lightTheme.textTheme.bodyLarge),
       actions: actionWidgets,

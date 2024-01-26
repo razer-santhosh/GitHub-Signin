@@ -30,5 +30,5 @@ class AppTheme {
             fontWeight: FontWeight.bold,
           ),
           bodySmall: TextStyle(fontWeight: FontWeight.w300, fontSize: 12),
-          labelMedium: TextStyle(fontSize: 15, color: Colors.white)));
+          labelMedium: TextStyle(fontSize: 17, color: Colors.white)));
 }

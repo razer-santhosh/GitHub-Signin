@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
 
 import 'constants.dart';
-import '../screens/dashboard/dashboard_view.dart';
-import '../screens/login/login_view.dart';
+import '../screens/dashboard/dashboardView.dart';
+import '../screens/login/loginView.dart';
 import '../services/githubSiginIn.dart';
 
 // GoRouter configuration for Navigation
@@ -11,7 +11,8 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       redirect: (context, state) {
-        return Constants.githubToken == null ? '/dashboard' : '/login';
+        print('token - ${Constants.githubToken}');
+        return Constants.githubToken != null ? '/dashboard' : '/login';
       },
     ),
     GoRoute(

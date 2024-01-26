@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:github/config/constants.dart';
 import 'package:provider/provider.dart';
 
 import 'common/themeData.dart';
@@ -13,6 +14,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Constants.githubToken = await Constants.storage.read(key: 'githubtoken');
   runApp(const MyApp());
 }
 

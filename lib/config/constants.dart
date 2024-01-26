@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:github/common/themeData.dart';
 
 class Constants {
   static const storage = FlutterSecureStorage();
@@ -9,4 +11,6 @@ class Constants {
   static String? githubToken;
   static String? userFirstName = 'Santhosh';
   static String? userLastName = 'Kumar';
+  static Color colorCode = AppTheme.lightTheme.primaryColor;
+  static Color secondaryColorCode = AppTheme.lightTheme.secondaryHeaderColor;
 }
