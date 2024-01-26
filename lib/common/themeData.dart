@@ -8,7 +8,7 @@ class AppTheme {
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       primaryColor: const Color(0xff706CFF),
       secondaryHeaderColor: Colors.white,
-      cardColor: const Color(0xffF2F2F2),
+      cardColor: Color(0xffFCFCFF),
       scaffoldBackgroundColor: Colors.white,
       shadowColor: Colors.white,
       canvasColor: Colors.white,
@@ -30,5 +30,6 @@ class AppTheme {
             fontWeight: FontWeight.bold,
           ),
           bodySmall: TextStyle(fontWeight: FontWeight.w300, fontSize: 12),
-          labelMedium: TextStyle(fontSize: 17, color: Colors.white)));
+          labelMedium: TextStyle(fontSize: 17, color: Colors.white),
+          labelLarge: TextStyle(fontSize: 20, color: Colors.white)));
 }

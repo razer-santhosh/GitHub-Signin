@@ -12,7 +12,7 @@ class LoginController {
       //save the token in locally
       Constants.githubToken = data.accessToken;
       await Constants.localStorage(
-          'githubtoken', Constants.githubToken.toString());
+          key: 'githubtoken', value: Constants.githubToken.toString());
       return true;
     } catch (e) {
       return false;

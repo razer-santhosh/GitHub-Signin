@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:github/config/constants.dart';
+import 'package:github/screens/dashboard/dashboardProvider.dart';
 import 'package:provider/provider.dart';
 
 import 'common/themeData.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ConnectivityProvider()),
+        ChangeNotifierProvider(create: (context) => DashboardDataProvider()),
       ],
       child: MaterialApp.router(
         routerConfig: router,

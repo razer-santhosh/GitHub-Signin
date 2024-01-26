@@ -12,7 +12,7 @@ class API {
     return response;
   }
 
-  static getGitHubData(getUrl, accessToken) async {
+  static getData(getUrl, accessToken) async {
     Uri url = uri(getUrl);
     var response =
         await http.get(url, headers: {'Authorization': 'Bearer $accessToken'});

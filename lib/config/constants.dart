@@ -4,13 +4,13 @@ import 'package:github/common/themeData.dart';
 
 class Constants {
   static const storage = FlutterSecureStorage();
-  static localStorage(String key, String value) async {
+  static Future<void> localStorage(
+      {required String key, required String value}) async {
     await storage.write(key: key, value: value);
   }
 
-  static String? githubToken;
-  static String? userFirstName = 'Santhosh';
-  static String? userLastName = 'Kumar';
-  static Color colorCode = AppTheme.lightTheme.primaryColor;
-  static Color secondaryColorCode = AppTheme.lightTheme.secondaryHeaderColor;
+  static String? githubToken, userName, userAvatar, companyName;
+  static Color colorCode = AppTheme.lightTheme.primaryColor,
+      whiteColor = Colors.white,
+      blackColor = Colors.black;
 }

@@ -11,7 +11,6 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       redirect: (context, state) {
-        print('token - ${Constants.githubToken}');
         return Constants.githubToken != null ? '/dashboard' : '/login';
       },
     ),
