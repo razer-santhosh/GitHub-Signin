@@ -6,14 +6,17 @@ import 'dashboardModel.dart';
 
 class DashboardDataProvider extends ChangeNotifier {
   bool _dataLoading = true;
-
   bool get dataLoading => _dataLoading;
 
-  fetchData() async {
-    DashboardModel? data = await DashboardController.getUserInitialData();
+  List<GitRepoModel> _gitRepoList = [];
+  List<GitRepoModel> get gitRepoList => _gitRepoList;
+
+  fetchInitialData() async {
+    DashboardDataModel? data = await DashboardController.getUserInitialData();
     if (data != null) {
       Constants.userName = data.name;
       Constants.userAvatar = data.avatarurl;
+      _gitRepoList = await DashboardController.getRepoList(data.reposurl!);
     }
     _dataLoading = false;
     notifyListeners();

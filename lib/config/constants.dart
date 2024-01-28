@@ -13,5 +13,6 @@ class Constants {
   static String? githubToken, userName, userAvatar, companyName;
   static Color colorCode = AppTheme.lightTheme.primaryColor,
       whiteColor = Colors.white,
-      blackColor = Colors.black;
+      blackColor = Colors.black,
+      orangeColor = Color(0xffFF957B);
 }

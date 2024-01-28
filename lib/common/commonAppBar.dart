@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../config/constants.dart';
 import 'themeData.dart';
@@ -17,7 +18,11 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Constants.colorCode,
-      leading: leading,
+      leading: leading ??
+          InkWell(
+              onTap: () => context.pop(), //to navigate to previous page
+              child: Icon(Icons.arrow_back_ios_outlined,
+                  color: Constants.whiteColor)),
       title: Text(title, style: AppTheme.lightTheme.textTheme.bodyLarge),
       actions: actionWidgets,
     );

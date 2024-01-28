@@ -9,6 +9,7 @@ class AppTheme {
       primaryColor: const Color(0xff706CFF),
       secondaryHeaderColor: Colors.white,
       cardColor: Color(0xffFCFCFF),
+      cardTheme: CardTheme(color: Colors.white, surfaceTintColor: Colors.white),
       scaffoldBackgroundColor: Colors.white,
       shadowColor: Colors.white,
       canvasColor: Colors.white,

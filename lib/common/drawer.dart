@@ -24,8 +24,8 @@ class AppDrawer extends StatelessWidget {
             margin: EdgeInsets.only(top: 15),
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Card(
-              color: AppTheme.lightTheme.cardColor,
-              elevation: 1,
+              color: Constants.whiteColor,
+              elevation: 0.3,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -35,7 +35,7 @@ class AppDrawer extends StatelessWidget {
                       height: 60,
                       width: 60,
                       child: Card(
-                        color: Color(0xffFF957B), //background color
+                        color: Constants.orangeColor, //background color
                         child: Constants.userAvatar ==
                                 null //show user image if it's not null
                             ? Center(
@@ -46,12 +46,18 @@ class AppDrawer extends StatelessWidget {
                               )
                             : Image.network(
                                 Constants.userAvatar!,
+                                loadingBuilder: (BuildContext context,
+                                        Widget child,
+                                        ImageChunkEvent? progress) =>
+                                    progress != null
+                                        ? CircularProgressIndicator()
+                                        : child,
                                 fit: BoxFit.contain,
                               ),
                       ),
                     ),
                     Gap(10),
-                    //user name
+                    //user name & company
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +71,7 @@ class AppDrawer extends StatelessWidget {
                         //company name if available
                         if (Constants.companyName != null)
                           Card(
-                            color: Color(0xffFF9B37),
+                            color: Constants.orangeColor,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5)),
                             child: Padding(

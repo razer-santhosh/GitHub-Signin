@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 
+import '../screens/repoDetails/repoDetailsView.dart';
 import 'constants.dart';
 import '../screens/dashboard/dashboardView.dart';
 import '../screens/login/loginView.dart';
@@ -30,6 +31,17 @@ final router = GoRouter(
       path: '/github-sign-in',
       builder: (context, state) {
         return GitHubSignIn();
+      },
+    ),
+    GoRoute(
+      path: '/repo-details',
+      builder: (context, state) {
+        List<dynamic> params = state.extra as List<dynamic>;
+        return RepoDetailsView(
+          branchList: params[0],
+          branchDetailsUrl: params[1],
+          repoName: params[2],
+        );
       },
     ),
   ],
